@@ -1,0 +1,125 @@
+<com.example.xyzreader.ui.DrawInsetsFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/draw_insets_frame_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <com.example.xyzreader.ui.ObservableScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="#fff"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/scroll_view_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipChildren="false">
+
+                <FrameLayout
+                    android:id="@+id/news_image_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/news_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop" />
+                </FrameLayout>
+
+                <com.example.xyzreader.ui.MaxWidthLinearLayout
+                    android:id="@+id/details_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:elevation="2dp"
+                    android:maxWidth="@dimen/detail_card_max_width"
+                    android:background="@color/background"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/extra_space_bottom"
+                    android:paddingEnd="@dimen/keyline_1"
+                    android:paddingRight="@dimen/keyline_1"
+                    android:paddingTop="@dimen/keyline_1">
+
+                    <TextView
+                        android:id="@+id/news_details"
+                        style="@style/Body1Text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/padding_normal"
+                        android:layout_marginLeft="@dimen/keyline_2"
+                        android:layout_marginStart="@dimen/keyline_2"
+                        android:lineSpacingMultiplier="1.5" />
+                </com.example.xyzreader.ui.MaxWidthLinearLayout>
+
+            <com.example.xyzreader.ui.MaxWidthLinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:elevation="2dp"
+                android:maxWidth="@dimen/detail_card_max_width"
+
+                    android:id="@+id/header_news"
+
+                    android:background="?colorPrimary"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/keyline_1"
+                    android:theme="@style/ActionBarThemeOverlay">
+
+                    <include layout="@layout/toolbar_actionbar" />
+
+                    <TextView
+                        android:id="@+id/news_title"
+                        style="@style/NewsTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/padding_normal"
+                        android:layout_marginLeft="@dimen/keyline_2"
+                        android:layout_marginRight="@dimen/padding_normal"
+                        android:layout_marginStart="@dimen/keyline_2"
+                        android:ellipsize="end"
+                        android:maxLines="4"
+                        android:textAlignment="viewStart"
+                        tools:text="@string/placeholder_news_title" />
+
+                    <TextView
+                        android:id="@+id/news_subtitle"
+                        style="@style/NewsSubtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/padding_normal"
+                        android:layout_marginLeft="@dimen/keyline_2"
+                        android:layout_marginRight="@dimen/padding_normal"
+                        android:layout_marginStart="@dimen/keyline_2"
+                        android:ellipsize="end"
+                        android:maxLines="2"
+                        android:textAlignment="viewStart"
+                        tools:text="@string/placeholder_news_subtitle" />
+
+                </com.example.xyzreader.ui.MaxWidthLinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </com.example.xyzreader.ui.ObservableScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/share_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/ic_share" />
+
+</com.example.xyzreader.ui.DrawInsetsFrameLayout>

@@ -1,0 +1,27 @@
+<resources>
+    <!-- detail -->
+    <dimen name="detail_title_text_size">32sp</dimen>
+    <dimen name="detail_body_text_size">22sp</dimen>
+    <item name="detail_body_line_spacing_multiplier" format="float" type="fraction">1.25</item>
+
+    <dimen name="fab_elevation">2dp</dimen>
+    <dimen name="fab_press_translation_z">6dp</dimen>
+    <dimen name="fab_margin">24dp</dimen>
+    <dimen name="keyline_1">16dp</dimen>
+    <dimen name="keyline_2">72dp</dimen>
+    <dimen name="padding_normal">16dp</dimen>
+    <dimen name="keyline_1_minus_8dp">8dp</dimen>
+    <dimen name="extra_space_bottom">48dp</dimen>
+    <dimen name="news_detail_max_header_elevation">4dp</dimen>
+    <dimen name="app_bar_elevation">4dp</dimen>
+    <dimen name="appbar_layoout_height">120dp</dimen>
+
+    <item name="body_1_spacing" format="float" type="dimen">1.22448979592</item>
+    <item name="h3_spacing" format="float" type="dimen">1.14285714286</item>
+
+
+    <dimen name="image_final_width">100dp</dimen>
+    <dimen name="image_width">200dp</dimen>"
+    <dimen name="spacing_normal">16dp</dimen>
+
+</resources>
